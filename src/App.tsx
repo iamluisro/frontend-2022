@@ -2,7 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+type AppProps = {
+  message: string;
+};
+
+function App({ message }: AppProps) {
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +22,10 @@ function App() {
         >
           Learn React
         </a>
+        <p>{message}</p>
+        <button onClick={() => newFunction()}>
+          This is a brande new thing
+        </button>
       </header>
     </div>
   );
